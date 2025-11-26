@@ -46,7 +46,6 @@ export class ShopService {
   if(filter.priceTo!==null && filter.priceTo !== undefined){
     result = result.filter(c => c.price <= filter.priceTo!); 
   }
-  
   return result;
  } 
 }
