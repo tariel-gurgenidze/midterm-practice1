@@ -12,15 +12,15 @@
             <input type="number" formControlName="priceTo" placeholder="Price to" />
         </div>
         <div class="filter-item">
-            <button>Search</button>
+            <button (click)="onSearch()" >Search</button>
         </div>
         <div class="filter-item">
-            <button>Reset</button>
+            <button (click)="onReset()" >Reset</button>
         </div>
     </div>
 </form>
 
-<table class="search-results">
+<table class="search-result">
     <thead>
         <th>Id</th>
         <th>Model</th>
@@ -28,7 +28,7 @@
         <th>Is available</th>
     </thead>
     <tbody>
-        @for(item of searchResults(); track item.id){
+        @for(item of searchResult(); track item.id){
             <tr [class]="{ 'out-of-stock': !item.isAvailable }">
                 <td>{{ item.id }}</td>
                 <td>{{ item.modelName }}</td>

@@ -24,4 +24,21 @@ export class UsbSearch implements OnInit {
 
     this.searchResult.set(allItems);
   }
+
+  onSearch() {
+    let filter = this.searchForm.value;
+    let filtwewdItems = this.shopService.filterItems({
+      model: filter.model,
+      priceFrom: filter.priceForm,
+      priceTo: filter.priceTo
+    });
+
+    this.searchResult.set(filtwewdItems);
+  }
+
+  onReset(){
+    this.searchForm.reset();
+    let allItems = this.shopService.getItems();
+    this.searchResult.set(allItems);
+  }
 }

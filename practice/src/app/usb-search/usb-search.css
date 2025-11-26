@@ -3,12 +3,12 @@
     background-color: yellow;
 }
 
-.search-results
+.search-result
 {
     border-collapse: collapse;
 }
 
-.search-results th, .search-results td
+.search-result th, .search-result td
 {
     padding: 5px;
     border: solid 1px;
